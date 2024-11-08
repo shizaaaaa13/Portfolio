@@ -1,0 +1,208 @@
+body {
+  background-image: radial-gradient(circle, #240430, #590960);
+  color: #f15aff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  margin-left: 20px;
+}
+
+.animation-container {
+  position: relative;
+  margin: 100px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  background-color: rgb(144, 8, 8);
+}
+
+.imag-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.write-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #f0f0f0;
+  opacity: 0;
+}
+
+.imag {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+.letterA {
+  position: absolute;
+  transform: scale(0.7);
+}
+
+.letterB {
+  position: absolute;
+  transform: scale(0.7);
+
+  right: 0;
+  bottom: 0;
+}
+
+.animation-container:hover svg circle {
+  opacity: 1;
+}
+
+svg circle {
+  opacity: 0;
+}
+
+@keyframes arriveCircle {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toCenterA {
+  from {
+    translate: 0 0;
+  }
+  80% {
+    translate: 40px 40px;
+    opacity: 1;
+  }
+  to {
+    translate: 40px 40px;
+    opacity: 0;
+  }
+}
+
+@keyframes toCenterB {
+  from {
+    translate: 0 0;
+  }
+  80% {
+    translate: -40px -40px;
+    opacity: 1;
+  }
+  to {
+    translate: -40px -40px;
+    opacity: 0;
+  }
+}
+
+@keyframes im {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes write {
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes toCenterBpath {
+  from {
+    fill: #000;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes toCenterApath {
+  from {
+    fill: #000;
+  }
+  to {
+    fill: #fff;
+  }
+}
+.animation-container:focus .letterB {
+  animation: toCenterB 8s forwards ease;
+}
+
+.animation-container:focus .letterA {
+  animation: toCenterA 8s forwards ease;
+}
+
+.animation-container:focus #letterB {
+  animation: toCenterBpath 5s forwards ease;
+}
+
+.animation-container:focus #letterA {
+  animation: toCenterApath 5s forwards ease;
+}
+
+.animation-container:focus .imag {
+  animation: im 8s forwards ease;
+}
+
+.animation-container:focus .write-container {
+  animation: write 9s forwards ease;
+}
+
+@keyframes shaking {
+  80% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateY(5px);
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+  95% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation-container:focus {
+  animation: shaking 10s forwards ease;
+}
+
+.but {
+  margin-left: 300px;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-width: 1px;
+  border-radius: 30px;
+  background-image: radial-gradient(circle, #a700e4, #812a89);
+  text-wrap: wrap;
+  display: inline-block;
+  transition: font-size 0.3s ease;
+  font-size: 20px;
+  align-items: flex;
+}
+
+.but:hover {
+  font-size: 25px;
+}

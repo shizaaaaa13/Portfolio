@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Расчеты для канав</title>
+    <link rel="stylesheet" href="pract.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Узнать необходимое количествок землекопов</h1>
+      <label for="length">Какая глубина канавы (м)?</label>
+      <input type="number" id="length" min="1" required />
+
+      <div>
+        <input type="checkbox" id="mechanized" />
+        <label for="mechanized">Механизированная бригада</label>
+      </div>
+
+      <button id="calculateBtn" class="but">Рассчитать</button>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="pract.js"></script>
+    <div>
+      <button onclick="history.back()" class="but">Вернуться обратно</button>
+    </div>
+  </body>
+</html>
